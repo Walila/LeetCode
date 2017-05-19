@@ -28,5 +28,34 @@ namespace Solutions
             
             return new int[] { -1, -1 };
         }
+
+        public class ListNode
+        {
+            public int val;
+            public ListNode next;
+            public ListNode(int x) { val = x; }
+        }
+        public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+        {
+            ListNode last;
+            int num = ((l1?.val ?? 0) + (l2?.val ?? 0));
+            bool hasCarry = num / 10 > 0;
+
+            ListNode list = new ListNode( num % 10);
+
+            last = list;
+            l1 = l1.next;
+            l2 = l2.next;
+            
+            for (; l1 != null || l2 != null || hasCarry; l1 = l1?.next, l2 = l2?.next)
+            {
+                num = (l1?.val ?? 0) + (l2?.val ?? 0) + (hasCarry ? 1 : 0);
+                hasCarry = num / 10 > 0;
+                last.next = new ListNode(num % 10);
+                last = last.next;
+            }
+
+            return list;
+        }
     }
 }

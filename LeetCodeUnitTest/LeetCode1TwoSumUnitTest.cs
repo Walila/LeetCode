@@ -73,7 +73,7 @@ namespace LeetCodeUnitTest
 
         private static void ShouldEqual(int[] expect, int[] actual)
         {
-            CollectionAssert.AreEqual(expect.OrderBy(x => x).ToArray(), actual.OrderBy(x => x).ToArray(),);
+            CollectionAssert.AreEqual(expect.OrderBy(x => x).ToArray(), actual.OrderBy(x => x).ToArray());
             
         }
 

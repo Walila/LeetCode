@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="LeetCode1TwoSumUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LeetCode2AddTwoNumbers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
