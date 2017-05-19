@@ -4,11 +4,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LeetCode1TwoSum
 {
     [TestClass]
-    public class UnitTest1
+    public class LeetCode1TwoSumUnitTest
     {
         [TestMethod]
         public void TestMethod1()
         {
         }
+        
     }
 }
