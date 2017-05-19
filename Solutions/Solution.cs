@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Solution
+namespace Solutions
 {
     public class Solution
     {
+        public int[] TwoSum(int[] nums, int target)
+        {
+
+        }
     }
 }
