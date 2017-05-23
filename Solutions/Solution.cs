@@ -8,6 +8,7 @@ namespace Solutions
 {
     public class Solution
     {
+        #region LeetCode 1
         public int[] TwoSum(int[] nums, int target)
         {
             var sortedDic = nums.Select((x, i) => new Tuple<int, int>(x, i)).OrderBy(x => x.Item1)
@@ -28,13 +29,16 @@ namespace Solutions
             
             return new int[] { -1, -1 };
         }
+        #endregion
 
+        #region LeetCode 2
         public class ListNode
         {
             public int val;
             public ListNode next;
             public ListNode(int x) { val = x; }
         }
+
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
             ListNode last;
@@ -57,5 +61,39 @@ namespace Solutions
 
             return list;
         }
+        #endregion
+
+        #region LeetCode 3
+        /// <remarks>原來HASHMAP什麼的資料結構真的有差，快很多 … 
+        /// 這個本來用STRING做的，效率差很多 …
+        /// </remarks>
+        public int LengthOfLongestSubstring(string s)
+        {
+            HashSet<char> temp = new HashSet<char>();
+            int longest = 0;
+            int    index = 0;
+            for (int i = 0; i < s.Length; ++i)
+            {
+                if(temp.Contains(s[i]))
+                {
+                    if (temp.Count > longest)
+                    {
+                        longest = temp.Count;
+                    }
+                    
+                    temp.Clear();
+                    i       = index;
+                    ++index;
+                    
+                }
+                else
+                {
+                    temp.Add(s[i]);
+                }
+            }
+            
+            return (temp.Count > longest) ? temp.Count : longest;
+        }
+        #endregion
     }
 }
