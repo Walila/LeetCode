@@ -28,10 +28,10 @@ namespace LeetCodeUnitTest
         }
 
         [TestMethod]
-        public void Input_badacbcrr_return_5()
+        public void Input_badacbcrr_return_4()
         {
             var input = "badacbcrr";
-            int expect = 5;
+            int expect = 4;
             int actual = LengthOfLongestSubstring(input);
 
             Assert.AreEqual(expect, actual);
