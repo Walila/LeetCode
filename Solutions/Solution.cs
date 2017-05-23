@@ -95,5 +95,30 @@ namespace Solutions
             return (temp.Count > longest) ? temp.Count : longest;
         }
         #endregion
+
+        #region LeetCode 4
+        public double FindMedianSortedArrays(int[] nums1, int[] nums2)
+        {
+            int totalLength = nums1.Length + nums2.Length;
+            bool isEven = 0.Equals(totalLength % 2);
+            Stack<int> stack = new Stack<int>();
+            int x = 0, y = 0;
+            for (int i = 0; i <= totalLength / 2; ++i)
+            {
+                if (y > nums2.Length - 1 || (x < nums1.Length && nums1[x] < nums2[y]))
+                {
+                    stack.Push(nums1[x++]);
+                }
+                else
+                {
+                    stack.Push(nums2[y++]);
+                }
+            }
+            if (isEven)
+                return (stack.Pop() + stack.Pop()) / 2.0;
+            return stack.Pop();
+            
+        }
+        #endregion
     }
 }

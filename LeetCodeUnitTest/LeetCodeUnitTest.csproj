@@ -52,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LeetCode2AddTwoNumbers.cs" />
     <Compile Include="LeetCode3LengthOfLongestSubstring.cs" />
+    <Compile Include="LeetCode4MidianOfTwoSortedArrays.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
