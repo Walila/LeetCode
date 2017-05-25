@@ -15,9 +15,9 @@ namespace Solutions
                 .Select((x, i) => new { element = x, index = i }).ToDictionary(k => k.index, v => v.element);
 
             var start = 0;
-            var end   = nums.Count()-1;
+            var end = nums.Count() - 1;
 
-            for(;start<end;)
+            for (; start < end;)
             {
                 if (sortedDic[start].Item1 + sortedDic[end].Item1 == target)
                     return new int[] { sortedDic[start].Item2, sortedDic[end].Item2 };
@@ -26,7 +26,7 @@ namespace Solutions
                 else
                     ++start;
             }
-            
+
             return new int[] { -1, -1 };
         }
         #endregion
@@ -45,12 +45,12 @@ namespace Solutions
             int num = ((l1?.val ?? 0) + (l2?.val ?? 0));
             bool hasCarry = num / 10 > 0;
 
-            ListNode list = new ListNode( num % 10);
+            ListNode list = new ListNode(num % 10);
 
             last = list;
             l1 = l1.next;
             l2 = l2.next;
-            
+
             for (; l1 != null || l2 != null || hasCarry; l1 = l1?.next, l2 = l2?.next)
             {
                 num = (l1?.val ?? 0) + (l2?.val ?? 0) + (hasCarry ? 1 : 0);
@@ -71,27 +71,27 @@ namespace Solutions
         {
             HashSet<char> temp = new HashSet<char>();
             int longest = 0;
-            int    index = 0;
+            int index = 0;
             for (int i = 0; i < s.Length; ++i)
             {
-                if(temp.Contains(s[i]))
+                if (temp.Contains(s[i]))
                 {
                     if (temp.Count > longest)
                     {
                         longest = temp.Count;
                     }
-                    
+
                     temp.Clear();
-                    i       = index;
+                    i = index;
                     ++index;
-                    
+
                 }
                 else
                 {
                     temp.Add(s[i]);
                 }
             }
-            
+
             return (temp.Count > longest) ? temp.Count : longest;
         }
         #endregion
@@ -117,8 +117,21 @@ namespace Solutions
             if (isEven)
                 return (stack.Pop() + stack.Pop()) / 2.0;
             return stack.Pop();
+
+        }
+        #endregion
+
+        #region LeetCode 6
+        public string Convert(string s, int numRows)
+        {
+            for(int row = 1;row <= numRows;++row)
+            {
+
+            }
             
+            return "PAHNAPLSIIGYIR";
         }
         #endregion
     }
+        
 }
