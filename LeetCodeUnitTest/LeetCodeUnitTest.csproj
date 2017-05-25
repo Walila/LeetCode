@@ -53,6 +53,7 @@
     <Compile Include="LeetCode2AddTwoNumbers.cs" />
     <Compile Include="LeetCode3LengthOfLongestSubstring.cs" />
     <Compile Include="LeetCode4MidianOfTwoSortedArrays.cs" />
+    <Compile Include="LeetCode5LongestPalindromeSubstring.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

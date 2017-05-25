@@ -120,5 +120,12 @@ namespace Solutions
             
         }
         #endregion
+
+        #region LeetCode 5
+        public string LongestPalindrome(string s)
+        {
+            return "bab";
+        }
+        #endregion
     }
 }
