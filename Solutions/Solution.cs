@@ -124,12 +124,36 @@ namespace Solutions
         #region LeetCode 6
         public string Convert(string s, int numRows)
         {
-            for(int row = 1;row <= numRows;++row)
-            {
-
-            }
+            string str = "";
             
-            return "PAHNAPLSIIGYIR";
+            int y = 0;
+            int length = s.Length;
+            if (length <= numRows || numRows == 1) return s;
+
+            for (int row = 1; row <= numRows; ++row)
+            {
+                y = row;
+                str += s[y - 1];
+
+                for (;;)
+                {
+                    if ((numRows > row) )
+                    {
+                        y += (numRows - row) * 2;
+                        if (y > length) break;
+                        str += s[y - 1];
+                    }
+
+                    if (row > 1)
+                    {
+                        y += (row - 1) * 2;
+                        if (y > length) break;
+                        str += s[y - 1];
+                    }
+                }
+            }
+
+            return str;
         }
         #endregion
     }
