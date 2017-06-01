@@ -121,6 +121,13 @@ namespace Solutions
         }
         #endregion
 
+        #region LeetCode 5
+        public string LongestPalindrome(string s)
+        {
+            return "bab";
+        }
+        #endregion
+
         #region LeetCode 6
         public string Convert(string s, int numRows)
         {
@@ -157,12 +164,6 @@ namespace Solutions
         }
         #endregion
 
-        #region LeetCode 5
-        public string LongestPalindrome(string s)
-        {
-            return "bab";
-        }
-        #endregion
     }
         
 }

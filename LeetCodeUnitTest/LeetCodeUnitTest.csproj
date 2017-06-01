@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LeetCode1TwoSumUnitTest.cs" />
+    <Compile Include="LeetCode5LongestPalindromeSubstring.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LeetCode2AddTwoNumbers.cs" />
     <Compile Include="LeetCode3LengthOfLongestSubstring.cs" />
