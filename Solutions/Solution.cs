@@ -127,7 +127,47 @@ namespace Solutions
         #region LeetCode 5
         public string LongestPalindrome(string s)
         {
-            return "bab";
+            int    max    = 0;
+            string maxStr = "";
+            int    length = s.Length;
+
+            for (int i = 0; i < length; ++i)
+            {
+                int head = i-1;
+                int tail = i+1;
+                int current = 1;
+                
+                for (; head > -1 && tail < length; --head, ++tail)
+                {
+                    if (s[head] == s[tail])
+                        current += 2;
+                    else
+                        break;
+                }
+                if(current > max)
+                {
+                    max = current;
+                    maxStr = s.Substring(head + 1, max);
+                }
+
+                head = i;
+                tail = i + 1;
+                current = 0;
+                for (; head > -1 && tail < length; --head, ++tail)
+                {
+                    if (s[head] == s[tail])
+                        current += 2;
+                    else
+                        break;
+                }
+                if (current > max)
+                {
+                    max = current;
+                    maxStr = s.Substring(head + 1, max);
+                }
+            }
+
+            return maxStr;
         }
         #endregion
 
