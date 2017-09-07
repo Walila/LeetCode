@@ -210,26 +210,28 @@ namespace Solutions
         #region LeetCode 7
         public int Reverse(int x)
         {
-            Stack<byte> stack = new Stack<byte>();
-            bool flag = (x == (uint)x);
-            x = x * (flag ? 1 : -1);
+            // int range : 2147483647 ~ -2147483648
+            bool isP = x == (uint)x;
+            Queue<sbyte> queue = new Queue<sbyte>();
 
-            int start = 0;
             int r = 0;
-            for (int i = 10; i >= 0; --i)
+            for (int i = 0; i < 10 && (x > 0 || x < 0 ); ++i)
             {
-                byte b = (byte)(x / Math.Pow(10, i));
-                if ( b > 0 || stack.Count > 0)
-                {
-                    stack.Push(b);
-                }
+                int n = x % 10;
+                queue.Enqueue((sbyte)n);
+                x = x / 10;
             }
-            for (int i = 0; i < stack.Count; ++i)
+            int last = 0;
+            var qcount = queue.Count;
+            for (int i = 0; i < qcount; ++i)
             {
-                r += (stack.Pop() * (int)Math.Pow(10, i));
+                r *= 10;                
+                r += queue.Dequeue();
+                if (isP && (r / 10 < last)) return 0;
+                if (!isP && (r / 10 > last)) return 0;
+                last = r;
             }
-
-            return x * (flag ? 1 : -1);
+            return r;
         }
         #endregion
 
