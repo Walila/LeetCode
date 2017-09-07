@@ -207,6 +207,32 @@ namespace Solutions
         }
         #endregion
 
+        #region LeetCode 7
+        public int Reverse(int x)
+        {
+            Stack<byte> stack = new Stack<byte>();
+            bool flag = (x == (uint)x);
+            x = x * (flag ? 1 : -1);
+
+            int start = 0;
+            int r = 0;
+            for (int i = 10; i >= 0; --i)
+            {
+                byte b = (byte)(x / Math.Pow(10, i));
+                if ( b > 0 || stack.Count > 0)
+                {
+                    stack.Push(b);
+                }
+            }
+            for (int i = 0; i < stack.Count; ++i)
+            {
+                r += (stack.Pop() * (int)Math.Pow(10, i));
+            }
+
+            return x * (flag ? 1 : -1);
+        }
+        #endregion
+
     }
         
 }
