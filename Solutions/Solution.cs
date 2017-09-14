@@ -257,7 +257,12 @@ namespace Solutions
                 if ((!startFlag && currentNumber < 1))
                 {
                     if (currentNumber.Equals(-3))
+                    {
+                        startFlag = true;
                         sign = false;
+                    }
+                    if (currentNumber.Equals(-5))
+                        startFlag = true;
                     continue;
                 }
                 else

@@ -246,6 +246,26 @@ namespace LeetCodeUnitTest
         }
         #endregion 裡面的字元有奇怪的東西
 
+        #region 來點亂七八糟的
+        [TestMethod]
+        public void I_ssm9sxyzw8e7q6t5r4e3g2h1j_O_()
+        {
+            string input = "  -9 xyzw8e7q6t5r4e3g2h1j";
+            int actual = MyAtoi(input);
+            int expected = -987654321;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void I_ssmsx9yzw8e7q6t5r4e3g2h1j_O_()
+        {
+            string input = "  - x9yzw8e7q6t5r4e3g2h1j";
+            int actual = MyAtoi(input);
+            int expected = -987654321;
+            Assert.AreEqual(expected, actual);
+        }
+        #endregion
+
         private int MyAtoi(string str)
         {
             Solutions.Solution sol = new Solutions.Solution();
