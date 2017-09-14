@@ -233,6 +233,55 @@ namespace Solutions
         }
         #endregion
 
+        #region LeetCode 8
+        // int.MaxValue =  2147483647
+        // int.MinValue = -2147483648
+        // 43 45 48 49 50 51 52 53 54 55 56 57
+        private static HashSet<char> integerChar = new HashSet<char>() { '+', '-', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ' ' };
+        //private static int almostLimit = 214748364;
+        public int MyAtoi(string str)
+        {
+            int result = 0;
+            bool startFlag = false;
+            bool sign = true;//正為true，負為false
+            for (int i = 0; i < str.Length; ++i)
+            {
+                if (!startFlag && !integerChar.Contains(str[i]))
+                    return 0;
+
+                int currentNumber = str[i] - 48; //做這個連前面空白的事也擋掉了，怎麼這麼好 …，等一下來測一下
+
+                if (startFlag && (currentNumber < 0 || currentNumber > 9))
+                    continue;
+
+                if ((!startFlag && currentNumber < 1))
+                {
+                    if (currentNumber.Equals(-3))
+                        sign = false;
+                    continue;
+                }
+                else
+                    startFlag = true;
+
+
+                if(214748364.Equals(result))
+                {
+                    if (sign && currentNumber > 7)
+                        return int.MaxValue;
+                    if (!sign && currentNumber > 8)
+                        return int.MinValue;
+                }
+                else if(214748364 < result)
+                {
+                    return sign ? int.MaxValue : int.MinValue;
+                }
+
+                result *= 10;
+                result += currentNumber;
+            }
+            return result * (sign ? 1 : -1);
+        }
+        #endregion LeetCode 8
     }
         
 }

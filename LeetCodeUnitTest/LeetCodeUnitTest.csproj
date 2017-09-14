@@ -56,6 +56,7 @@
     <Compile Include="LeetCode4MidianOfTwoSortedArrays.cs" />
     <Compile Include="LeetCode6ZigZagConversion.cs" />
     <Compile Include="LeetCode7ReverseInteger.cs" />
+    <Compile Include="LeetCode8StringToInteger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

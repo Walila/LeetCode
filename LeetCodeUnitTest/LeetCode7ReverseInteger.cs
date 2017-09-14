@@ -3,6 +3,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LeetCodeUnitTest
 {
+    /// <remarks>
+    /// 這太他媽懶了，沒有認真寫測試…結果去LEETCODE上被退了兩次
+    /// 有兩個沒有考慮到的例外，這是TDD的用意之一嗎？
+    /// 那測試沒想到的話也是GG XD
+    /// </remarks>
     [TestClass]
     public class LeetCode7ReverseInteger
     {
