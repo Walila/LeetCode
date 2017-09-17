@@ -6,6 +6,8 @@ namespace LeetCodeUnitTest
     // int.MaxValue =  2147483647
     // int.MinValue = -2147483648
     //超認真的測試啊，再加個亂七八糟的就應該沒問題了
+    //幹，結果還是POST了三次才過，根本誤會題目的意思 … 
+    //英文太差 … 
     [TestClass]
     public class LeetCode8StringToInteger
     {
@@ -218,20 +220,20 @@ namespace LeetCodeUnitTest
         #region 裡面的字元有奇怪的東西
 
         [TestMethod]
-        public void I_1239slash0540_O_m12390540()
+        public void I_1239slash0540_O_m1239()
         {
             string input = "1239/0540";
             int actual = MyAtoi(input);
-            int expected = 12390540;
+            int expected = 1239;
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void I_1q2w3e9r0t5y4u0_O_12390540()
+        public void I_1q2w3e9r0t5y4u0_O_1()
         {
             string input = "1q2w3e9r0t5y4u0";
             int actual = MyAtoi(input);
-            int expected = 12390540;
+            int expected = 1;
             Assert.AreEqual(expected, actual);
         }
 
@@ -241,7 +243,7 @@ namespace LeetCodeUnitTest
         {
             string input = "   -8541236mdf7";
             int actual = MyAtoi(input);
-            int expected = -85412367;
+            int expected = -8541236;
             Assert.AreEqual(expected, actual);
         }
         #endregion 裡面的字元有奇怪的東西
@@ -252,7 +254,7 @@ namespace LeetCodeUnitTest
         {
             string input = "  -9 xyzw8e7q6t5r4e3g2h1j";
             int actual = MyAtoi(input);
-            int expected = -987654321;
+            int expected = -9;
             Assert.AreEqual(expected, actual);
         }
 
@@ -261,7 +263,7 @@ namespace LeetCodeUnitTest
         {
             string input = "  - x9yzw8e7q6t5r4e3g2h1j";
             int actual = MyAtoi(input);
-            int expected = -987654321;
+            int expected = 0;
             Assert.AreEqual(expected, actual);
         }
         #endregion

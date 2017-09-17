@@ -238,7 +238,6 @@ namespace Solutions
         // int.MinValue = -2147483648
         // 43 45 48 49 50 51 52 53 54 55 56 57
         private static HashSet<char> integerChar = new HashSet<char>() { '+', '-', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ' ' };
-        //private static int almostLimit = 214748364;
         public int MyAtoi(string str)
         {
             int result = 0;
@@ -251,8 +250,13 @@ namespace Solutions
 
                 int currentNumber = str[i] - 48; //做這個連前面空白的事也擋掉了，怎麼這麼好 …，等一下來測一下
 
-                if (startFlag && (currentNumber < 0 || currentNumber > 9))
-                    continue;
+                if (startFlag)
+                {
+                    if ((-3).Equals(currentNumber) || (-5).Equals(currentNumber))
+                        return 0;
+                    if ((currentNumber < 0 || currentNumber > 9))
+                        return result * (sign ? 1 : -1);
+                }
 
                 if ((!startFlag && currentNumber < 1))
                 {
