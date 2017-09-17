@@ -35,6 +35,39 @@ namespace LeetCodeUnitTest
             int actual = Reverse(input);
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void I_m12_O_m21()
+        {
+            int input = -12;
+            int expected = -21;
+            int actual = Reverse(input);
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void I_123456789_O_987654321()
+        {
+            int input = 123456789;
+            int expected = 987654321;
+            int actual = Reverse(input);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void I_m123456789_O_987654321()
+        {
+            int input = -123456789;
+            int expected = -987654321;
+            int actual = Reverse(input);
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void I_1534236469_O_9646214351()
+        {
+            int input = 1534236469;
+            int expected = 0;
+            int actual = Reverse(input);
+            Assert.AreEqual(expected, actual);
+        }
 
         private int Reverse(int x)
         {
