@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Solutions;
 
-namespace LeetCodeUnitTest
+namespace Solutions.UnitTests
 {
-    [TestClass]
-    public class LeetCode3LengthOfLongestSubstring
+    [TestFixture]
+    public class LeetCode003LengthOfLongestSubstring
     {
-        [TestMethod]
+        [Test]
         public void Input_abc_return_3()
         {
             var input = "abc";
@@ -17,7 +17,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void Input_aacbc_return_3()
         {
             var input = "aacbc";
@@ -27,7 +27,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void Input_badacbcrr_return_4()
         {
             var input = "badacbcrr";
@@ -37,7 +37,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void Input_pwwkew_return_3()
         {
             var input = "pwwkew";
@@ -47,7 +47,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void Input_jbpnbwwd_return_4()
         {
             var input = "jbpnbwwd";
@@ -57,7 +57,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void Input_longstring_return_94()
         {
             var input = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";

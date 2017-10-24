@@ -45,7 +45,15 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LeetCode10RegularExpressionMatchingTest.cs" />
+    <Compile Include="LeetCode010RegularExpressionMatchingTest.cs" />
+    <Compile Include="LeetCode001TwoSumUnitTest.cs" />
+    <Compile Include="LeetCode002AddTwoNumbers.cs" />
+    <Compile Include="LeetCode003LengthOfLongestSubstring.cs" />
+    <Compile Include="LeetCode004MidianOfTwoSortedArrays.cs" />
+    <Compile Include="LeetCode005LongestPalindromeSubstring.cs" />
+    <Compile Include="LeetCode006ZigZagConversion.cs" />
+    <Compile Include="LeetCode007ReverseInteger.cs" />
+    <Compile Include="LeetCode008StringToInteger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

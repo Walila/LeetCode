@@ -1,12 +1,12 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
-namespace LeetCodeUnitTest
+namespace Solutions.UnitTests
 {
-    [TestClass]
-    public class LeetCode6ZigZagConversion
+    [TestFixture]
+    public class LeetCode006ZigZagConversion
     {
-        [TestMethod]
+        [Test]
         public void I__3_O_()
         {
             var input = "";
@@ -15,7 +15,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_A_1_O_A()
         {
             var input = "A";
@@ -24,7 +24,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_AB_1_O_AB()
         {
             var input = "AB";
@@ -33,7 +33,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_PAYPALISHIRING_3_O_PAHNAPLSIIGYIR()
         {
             var input = "PAYPALISHIRING";
@@ -42,7 +42,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_ABCDEFG_3_O_AEBDFCG()
         {
             var input = "ABCDEFG";
@@ -51,7 +51,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_ABCDEFGH_3_O_AEBDFHCG()
         {
             var input = "ABCDEFGH";
@@ -60,7 +60,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_ABCDEFGHI_3_O_AEIBDFHCG()
         {
             var input = "ABCDEFGHI";
@@ -69,7 +69,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_ABCDEFGHIJ_3_O_AEIBDFHJCG()
         {
             var input = "ABCDEFGHIJ";
@@ -78,7 +78,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_ABCDEFGHIJK_3_O_AEIBDFHJCGK()
         {
             var input = "ABCDEFGHIJK";
@@ -87,7 +87,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_ABCDEFGHIJKLMNOP_4_O_AGMBFHLNCEIKODJP()
         {
             var input = "ABCDEFGHIJKLMNOP";
@@ -96,7 +96,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_ABCDEFGHIJKLMNOPQ_4_O_AGMBFHLNCEIKOQDJP()
         {
             var input = "ABCDEFGHIJKLMNOPQ";
@@ -105,7 +105,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_ABCDEFGHIJKLMNOPQR_4_O_AGMBFHLNRCEIKOQDJP()
         {
             var input = "ABCDEFGHIJKLMNOPQR";
@@ -114,7 +114,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_ABCDEFGHIJKLMNOPQRS_4_O_AGMSBFHLNRCEIKOQDJP()
         {
             var input = "ABCDEFGHIJKLMNOPQRS";
@@ -123,7 +123,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
         
-        [TestMethod]
+        [Test]
         public void I_ABCDEFGHIJKLMNOPQRST_4_O_AGMSBFHLNRTCEIKOQDJP()
         {
             var input = "ABCDEFGHIJKLMNOPQRST";
@@ -132,7 +132,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_ABCDEFGHIJKLMNOPQRSTU_4_O_AGMSBFHLNRTCEIKOQUDJP()
         {
             var input = "ABCDEFGHIJKLMNOPQRSTU";

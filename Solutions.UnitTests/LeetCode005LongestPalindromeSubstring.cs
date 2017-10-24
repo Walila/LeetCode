@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Linq;
 
-namespace LeetCodeUnitTest
+namespace Solutions.UnitTests
 {
-    [TestClass]
-    public class LeetCode5LongestPalindromeSubstring
+    [TestFixture]
+    public class LeetCode005LongestPalindromeSubstring
     {
-        [TestMethod]
+        [Test]
         public void I_abaxyz_O_aba()
         {
             var input = "abaxyz";
@@ -16,7 +16,7 @@ namespace LeetCodeUnitTest
 
             Assert.AreEqual(expect, actual);
         }
-        [TestMethod]
+        [Test]
         public void I_xyzaba_O_aba()
         {
             var input = "xyzaba";
@@ -25,7 +25,7 @@ namespace LeetCodeUnitTest
 
             Assert.AreEqual(expect, actual);
         }
-        [TestMethod]
+        [Test]
         public void I_zrabaxz_O_aba()
         {
             var input = "zrabaxz";
@@ -35,7 +35,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_zrabbaxz_O_abba()
         {
             var input = "zrabbaxz";
@@ -44,7 +44,7 @@ namespace LeetCodeUnitTest
 
             Assert.AreEqual(expect, actual);
         }
-        [TestMethod]
+        [Test]
         public void I_zrdgabba_O_abba()
         {
             var input = "zrdgabba";
@@ -53,7 +53,7 @@ namespace LeetCodeUnitTest
 
             Assert.AreEqual(expect, actual);
         }
-        [TestMethod]
+        [Test]
         public void I_abbafexz_O_abba()
         {
             var input = "abbafexz";
@@ -63,7 +63,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
         
-        [TestMethod]
+        [Test]
         public void I_babad_O_bab()
         {
             var input = "babad";
@@ -73,7 +73,7 @@ namespace LeetCodeUnitTest
             Assert.IsTrue(expect.Contains(actual));
         }
 
-        [TestMethod]
+        [Test]
         public void I_abcbaabcba_O_abcbaabcba()
         {
             var input = "abcbaabcba";
@@ -83,7 +83,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_abcbaabcbaqwertyuiopoiuytrewq_O_qwertyuiopoiuytrewq()
         {
             var input = "abcbaabcbaqwertyuiopoiuytrewq";
@@ -93,7 +93,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_qwertyuiopasdfghjklzxcvbnmmnbvcxzlkjhgfdsapoiuytrewqwertyuiop_O_qwertyuiopasdfghjklzxcvbnmmnbvcxzlkjhgfdsapoiuytrewq()
         {
             var input = "qwertyuiopasdfghjklzxcvbnmmnbvcxzlkjhgfdsapoiuytrewqwertyuiop";

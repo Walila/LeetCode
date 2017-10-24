@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Solutions;
 using static Solutions.Solution;
 
-namespace LeetCodeUnitTest
+namespace Solutions.UnitTests
 {
-    [TestClass]
-    public class LeetCode2AddTwoNumbers
+    [TestFixture]
+    public class LeetCode002AddTwoNumbers
     {
-        [TestMethod]
+        [Test]
         public void Input1_2_3And2_3_4Output3_5_7()
         {
             ListNode expect = CreateNodeList(new int[] { 3, 5, 7 });
@@ -20,7 +20,7 @@ namespace LeetCodeUnitTest
             ShouldEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void Input1_4_2And4_8_3Output5_2_6()
         {
             ListNode expect = CreateNodeList(new int[] { 5, 2, 6 });
@@ -32,7 +32,7 @@ namespace LeetCodeUnitTest
             ShouldEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void Input2_4_6And4_6_8Output6_0_5_1()
         {
             ListNode expect = CreateNodeList(new int[] { 6, 0, 5, 1 });

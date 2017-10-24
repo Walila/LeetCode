@@ -1,17 +1,17 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
-namespace LeetCodeUnitTest
+namespace Solutions.UnitTests
 {
     /// <remarks>
     /// 這太他媽懶了，沒有認真寫測試…結果去LEETCODE上被退了兩次
     /// 有兩個沒有考慮到的例外，這是TDD的用意之一嗎？
     /// 那測試沒想到的話也是GG XD
     /// </remarks>
-    [TestClass]
-    public class LeetCode7ReverseInteger
+    [TestFixture]
+    public class LeetCode007ReverseInteger
     {
-        [TestMethod]
+        [Test]
         public void I_5_O_5()
         {
             int input = 5;
@@ -19,7 +19,7 @@ namespace LeetCodeUnitTest
             int actual = Reverse(input);
             Assert.AreEqual(expected, actual);
         }
-        [TestMethod]
+        [Test]
         public void I_m5_O_m5()
         {
             int input = -5;
@@ -27,7 +27,7 @@ namespace LeetCodeUnitTest
             int actual = Reverse(input);
             Assert.AreEqual(expected, actual);
         }
-        [TestMethod]
+        [Test]
         public void I_12_O_21()
         {
             int input = 12;
@@ -35,7 +35,7 @@ namespace LeetCodeUnitTest
             int actual = Reverse(input);
             Assert.AreEqual(expected, actual);
         }
-        [TestMethod]
+        [Test]
         public void I_m12_O_m21()
         {
             int input = -12;
@@ -43,7 +43,7 @@ namespace LeetCodeUnitTest
             int actual = Reverse(input);
             Assert.AreEqual(expected, actual);
         }
-        [TestMethod]
+        [Test]
         public void I_123456789_O_987654321()
         {
             int input = 123456789;
@@ -52,7 +52,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void I_m123456789_O_987654321()
         {
             int input = -123456789;
@@ -60,7 +60,7 @@ namespace LeetCodeUnitTest
             int actual = Reverse(input);
             Assert.AreEqual(expected, actual);
         }
-        [TestMethod]
+        [Test]
         public void I_1534236469_O_9646214351()
         {
             int input = 1534236469;

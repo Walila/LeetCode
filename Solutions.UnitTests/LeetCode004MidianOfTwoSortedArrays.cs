@@ -1,12 +1,12 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
-namespace LeetCodeUnitTest
+namespace Solutions.UnitTests
 {
-    [TestClass]
-    public class LeetCode4MidianOfTwoSortedArrays
+    [TestFixture]
+    public class LeetCode004MidianOfTwoSortedArrays
     {
-        [TestMethod]
+        [Test]
         public void In_1_2And_3_Out_2()
         {
             int[] nums1 = new int[]{ 1, 2 };
@@ -18,7 +18,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void In_1_2And_3_4_Out_2p5()
         {
             int[] nums1 = new int[] { 1, 2 };
@@ -30,7 +30,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
         
-        [TestMethod]
+        [Test]
         public void In_3_4And_1_2_Out_2p5()
         {
             int[] nums1 = new int[] { 3, 4 };
@@ -43,7 +43,7 @@ namespace LeetCodeUnitTest
         }
 
 
-        [TestMethod]
+        [Test]
         public void In_two_same_long_int_arr_Out_lengthm0p5p5()
         {
             int length = 100;
@@ -62,7 +62,7 @@ namespace LeetCodeUnitTest
             Assert.AreEqual(expect, actual);
         }
         
-        [TestMethod]
+        [Test]
         public void In_two_different_long_int_arr_Out_lengthp5()
         {
             int length = 100;
@@ -82,7 +82,7 @@ namespace LeetCodeUnitTest
         }
 
 
-        [TestMethod]
+        [Test]
         public void In_two_different_long_int_arr2_Out_lengthp5()
         {
             int length = 1000;

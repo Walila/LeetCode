@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace Solutions.UnitTests
 {
     [TestFixture]
-    public class LeetCode10RegularExpressionMatchingTest
+    public class LeetCode010RegularExpressionMatchingTest
     {
         [Test]
         public void I_null_null_O_T()

@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Solutions;
 using System.Linq;
+using NUnit.Framework;
 
-namespace LeetCodeUnitTest
+namespace Solutions.UnitTests
 {
-    [TestClass]
-    public class LeetCode1TwoSumUnitTest
+    [TestFixture]
+    public class LeetCode001TwoSumUnitTest
     {
-        [TestMethod]
+        [Test]
         public void Input_1_8_Target_9()
         {
             var num = new int[] { 1, 8 };
@@ -19,7 +19,7 @@ namespace LeetCodeUnitTest
             ShouldEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void Input_1_8_3_7Target_9()
         {
             var num = new int[] { 1, 8, 3, 7 };
@@ -30,7 +30,7 @@ namespace LeetCodeUnitTest
             ShouldEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void Input_1_2_4_7Target_6()
         {
             var num = new int[] { 1, 2, 4, 7 };
@@ -41,7 +41,7 @@ namespace LeetCodeUnitTest
             ShouldEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void Input_3_8_5_2Target10()
         {
 
@@ -53,7 +53,7 @@ namespace LeetCodeUnitTest
             ShouldEqual(expect, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void Input_1_3_5_7_9_2_4_6_8Target17()
         {
 
