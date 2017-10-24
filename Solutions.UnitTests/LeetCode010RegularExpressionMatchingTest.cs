@@ -9,6 +9,7 @@ namespace Solutions.UnitTests
     [TestFixture]
     public class LeetCode010RegularExpressionMatchingTest
     {
+        //都是NULL
         [Test]
         public void I_null_null_O_T()
         {
@@ -18,6 +19,7 @@ namespace Solutions.UnitTests
             Assert.IsTrue(result);
         }
 
+        //都是字串a
         [Test]
         public void I_a_a_O_T()
         {
@@ -27,6 +29,7 @@ namespace Solutions.UnitTests
             Assert.IsTrue(result);
         }
 
+        //pattern是A，輸入不是
         [TestCase("B")]
         [TestCase("C")]
         [TestCase("D")]
@@ -38,6 +41,7 @@ namespace Solutions.UnitTests
             Assert.IsFalse(result);
         }
 
+        //輸入和pattern一樣
         [Test]
         public void S_and_P_are_The_Same()
         {
@@ -50,6 +54,7 @@ namespace Solutions.UnitTests
             Assert.IsTrue(result);
         }
 
+        //輸入和pattern不同
         [TestCase("abcd", TestName = "I abcd to abcde")]
         [TestCase("abcdef", TestName = "I abcdef to abcde")]
         [TestCase("bcde", TestName = "I bcde to abcde")]
@@ -60,10 +65,8 @@ namespace Solutions.UnitTests
             bool result = IsMatch(str, pattern);
             Assert.IsFalse(result);
         }
-
-        //[TestCase("abcd", TestName = "I abcd to a*bcd")]
-        //[TestCase("bcd", TestName = "I bcd to a*bcd")]
-        //[TestCase("aaabcd", TestName = "I aaabcd to a*bcd")]
+        
+        //加一個星號的測試
         [Test]
         public void p_aSbcd_O_T([Values("abcd", "bcd", "aaabcd")] string str)
         {
@@ -72,6 +75,7 @@ namespace Solutions.UnitTests
             Assert.IsTrue(result);
         }
 
+        //pattern加兩個星號的測試
         [TestCase("bd", TestName = "I bd to a*bc*d")]
         [TestCase("abd", TestName = "I abd to a*bc*d")]
         [TestCase("bcd", TestName = "I bcd to a*bc*d")]
