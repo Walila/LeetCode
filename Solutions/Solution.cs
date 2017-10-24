@@ -294,7 +294,7 @@ namespace Solutions
         }
         #endregion LeetCode 8
 
-        #region LeetCode 9
+        #region LeetCode 10
         public bool IsMatch(string s, string p)
         {
             if(string.IsNullOrEmpty(s) && string.IsNullOrEmpty(p))
@@ -302,9 +302,27 @@ namespace Solutions
             if (string.IsNullOrEmpty(s) || string.IsNullOrEmpty(p))
                 return false;
 
-            return s.Equals(p);
+            var ss = s.ToCharArray();
+            var ps = p.ToCharArray();
+            int scount = ss.Length;
+            int pcount = ps.Length;
+
+
+            int i = 0;
+            int j = 0;
+            for (i = 0, j = 0; i < scount && j < pcount; ++i, ++j)
+            {
+                
+
+                if (!ss[i].Equals(ps[j]))
+                    return false;
+            }
+            if (!i.Equals(scount) || !j.Equals(pcount))
+                return false;                        
+
+            return true;
         }
-        #endregion LeetCode 9
+        #endregion LeetCode 10
     }
         
 }
