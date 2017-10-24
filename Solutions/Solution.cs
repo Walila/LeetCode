@@ -293,6 +293,18 @@ namespace Solutions
             return result * (sign ? 1 : -1);
         }
         #endregion LeetCode 8
+
+        #region LeetCode 9
+        public bool IsMatch(string s, string p)
+        {
+            if(string.IsNullOrEmpty(s) && string.IsNullOrEmpty(p))
+                return true;
+            if (string.IsNullOrEmpty(s) || string.IsNullOrEmpty(p))
+                return false;
+
+            return s.Equals(p);
+        }
+        #endregion LeetCode 9
     }
         
 }
