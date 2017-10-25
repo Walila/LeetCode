@@ -83,12 +83,25 @@ namespace Solutions.UnitTests
         [TestCase("aaaabd", TestName = "I aaaabd to a*bc*d")]
         [TestCase("bccccd", TestName = "I bccccd to a*bc*d")]
         [TestCase("aabcccd", TestName = "I aabcccd to a*bc*d")]
-        public void p_aSbcSd_O_F(string str)
+        public void p_aSbcSd_O_T(string str)
         {
             string pattern = "a*bc*d";
             bool result = IsMatch(str, pattern);
             Assert.IsTrue(result);
         }
+
+        //一個星號後面是一個重復的字元
+        [TestCase("abc", TestName = "I abc to a*abc")]
+        [TestCase("aabc", TestName = "I abc to a*abc")]
+        [TestCase("aaaaabc", TestName = "I abc to a*abc")]
+        public void p_aSabc_O_T(string str)
+        {
+            string pattern = "a*abc";
+            bool result = IsMatch(str, pattern);
+            Assert.IsTrue(result);
+        }
+
+        //一個星號後面兩個重復字元
 
         private bool IsMatch(string s, string p)
         {

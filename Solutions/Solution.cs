@@ -295,33 +295,92 @@ namespace Solutions
         #endregion LeetCode 8
 
         #region LeetCode 10
+
         public bool IsMatch(string s, string p)
         {
-            if(string.IsNullOrEmpty(s) && string.IsNullOrEmpty(p))
+            if (string.IsNullOrEmpty(s) && string.IsNullOrEmpty(p))
                 return true;
             if (string.IsNullOrEmpty(s) || string.IsNullOrEmpty(p))
                 return false;
 
-            var ss = s.ToCharArray();
-            var ps = p.ToCharArray();
-            int scount = ss.Length;
-            int pcount = ps.Length;
+            LinkedList<char> sl = new LinkedList<char>(s);
+            LinkedList<char> pl = new LinkedList<char>(p);
 
+            var snode = sl.First;
+            var pnode = pl.First;
 
-            int i = 0;
-            int j = 0;
-            for (i = 0, j = 0; i < scount && j < pcount; ++i, ++j)
+            while (snode != null && pnode != null)
             {
-                
+                if('*'.Equals(pnode.Next?.Value))
+                {
+                    while(snode.Value.Equals(pnode.Value))
+                    {
+                        snode = snode.Next;
+                    }
 
-                if (!ss[i].Equals(ps[j]))
+                    pnode = pnode.Next?.Next;
+                    continue;
+                }
+
+                if (!snode.Value.Equals(pnode.Value))
                     return false;
+                snode = snode.Next;
+                pnode = pnode.Next;
             }
-            if (!i.Equals(scount) || !j.Equals(pcount))
-                return false;                        
+            if (snode != null || pnode != null)
+                return false;
 
             return true;
         }
+
+        //public bool IsMatch(string s, string p)
+        //{
+        //    if(string.IsNullOrEmpty(s) && string.IsNullOrEmpty(p))
+        //        return true;
+        //    if (string.IsNullOrEmpty(s) || string.IsNullOrEmpty(p))
+        //        return false;
+
+        //    var ss = s.ToCharArray();
+        //    var ps = p.ToCharArray();
+        //    int scount = ss.Length;
+        //    int pcount = ps.Length;
+
+        //    LinkedList<char> sll = new LinkedList<char>(s);
+        //    LinkedList<char> pll = new LinkedList<char>(p);
+
+            
+            
+
+        //    int i = 0;
+        //    int j = 0;
+        //    char pn = ps[0];
+
+        //    for (i = 0, j = 0; i < scount && j < pcount; ++i, ++j)
+        //    {
+        //        pn = (char)0;
+        //        if (j < pcount - 1)
+        //            pn = ps[j + 1];
+
+        //        if (pn == '*')
+        //        {
+        //            while (ss[i] == ps[j])
+        //            {
+        //                ++i;
+        //            }
+        //            --i;
+        //            ++j;
+        //            continue;
+        //        }
+
+        //        if (!ss[i].Equals(ps[j]))
+        //            return false;
+                
+        //    }
+        //    if (!i.Equals(scount) || !j.Equals(pcount))
+        //        return false;                        
+
+        //    return true;
+        //}
         #endregion LeetCode 10
     }
         
